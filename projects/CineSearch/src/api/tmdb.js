@@ -1,5 +1,9 @@
 import api from "../lib/axios";
 
+const IMAGE_BASE = import.meta.env.VITE_TMDB_IMAGE;
+
+export const getImageUrl = (path, size = "w500") => (path ? `${IMAGE_BASE}/${size}${path}` : null);
+
 export const tmdbApi = {
   // Film
   getPopularMovies: (page = 1) =>

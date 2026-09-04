@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_TMDB_KEY,
+  baseURL: import.meta.env.VITE_TMDB_BASE,
   timeout: 10000,
   params: {
-    api_key: import.meta.env.VITE_TMDB_BASE,
+    api_key: import.meta.env.VITE_TMDB_KEY,
     language: "tr-TR",
   },
 });

@@ -1,8 +1,11 @@
 import "./App.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { FavoritesProvider } from "./context/FavoritesContext";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import MediaCard from "./components/MediaCard";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const queryClient = new QueryClient({
@@ -24,7 +27,10 @@ function App() {
               style: { background: "#1f2937", color: "#fff", border: "1px solid #374151" },
             }}
           />
-          <Routes></Routes>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
         </BrowserRouter>
       </FavoritesProvider>
     </QueryClientProvider>

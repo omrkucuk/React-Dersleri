@@ -44,7 +44,7 @@ export function useTvDetail(id) {
 export function useMovieGenres() {
   return useQuery({
     queryKey: mediaKeys.movieGenres(),
-    queryFn: () => tmdbApi.getMovieGenres,
+    queryFn: () => tmdbApi.getMovieGenres(),
     staleTime: Infinity, // türler hiç değişmez, bir kez çek yeter
   });
 }
