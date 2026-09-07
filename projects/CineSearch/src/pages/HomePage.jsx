@@ -62,7 +62,10 @@ const HomePage = () => {
         {data && (
           <div className="flex items-center justify-between mt-8 pt-6 border-t border-gray-800">
             <button
-              onClick={() => setPage((p) => p - 1)}
+              onClick={() => {
+                setPage((p) => p - 1);
+                window.scroll({ top: 0, behavior: "smooth" });
+              }}
               disabled={page === 1}
               className="px-5 py-2 bg-gray-800 text-white rounded-lg text-sm disabled:opacity-40 hover:bg-gray-700 transition-colors flex items-center gap-2 cursor-pointer"
             >
@@ -74,7 +77,10 @@ const HomePage = () => {
             </span>
 
             <button
-              onClick={() => setPage((p) => p + 1)}
+              onClick={() => {
+                setPage((p) => p + 1);
+                window.scroll({ top: 0, behavior: "smooth" });
+              }}
               disabled={isPlaceholder || page >= 500}
               className="px-5 py-2 bg-gray-800 text-white rounded-lg text-sm disabled:opacity-40 hover:bg-gray-700 transition-colors flex items-center gap-2 cursor-pointer"
             >

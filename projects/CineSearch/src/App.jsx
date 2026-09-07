@@ -6,6 +6,9 @@ import { Toaster } from "react-hot-toast";
 import MediaCard from "./components/MediaCard";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
+import MovieDetailPage from "./pages/MovieDetailPage";
+import FavoritesPage from "./pages/FavoritesPage";
 
 function App() {
   const queryClient = new QueryClient({
@@ -30,6 +33,10 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/movie/:id" element={<MovieDetailPage />} />
+            <Route path="/favorites" element={<FavoritesPage />} />
+            {/* <Route path="/tv/:id" element={<TvDetailPage />} /> */}
           </Routes>
         </BrowserRouter>
       </FavoritesProvider>
