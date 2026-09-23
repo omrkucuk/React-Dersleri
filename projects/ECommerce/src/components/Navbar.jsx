@@ -50,7 +50,7 @@ const Navbar = () => {
 
           <button
             onClick={() => dispatch(openCart())}
-            className="relative flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50"
+            className="relative flex items-center gap-2 px-3 py-1.5 border border-gray-300 rounded-lg text-sm text-gray-700 hover:bg-gray-50 cursor-pointer"
           >
             <ShoppingCart />
             Sepet
